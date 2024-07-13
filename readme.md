@@ -73,3 +73,4 @@ Eventually, I would like to be able to break my resume into individual sections 
 - [Git Latex Workflow - StackOverflow](https://stackoverflow.com/questions/6188780/git-latex-workflow)
 - [Latexdiff](https://www.ctan.org/tex-archive/support/latexdiff/)
 - [How to configure the output directory for latex workshop in VSCode](https://github.com/James-Yu/LaTeX-Workshop/issues/548)
+- [Latex Template for a Resume - Andrew C](https://www.overleaf.com/latex/templates/andrewresumeworkshop/yrpwhsjdypmw)

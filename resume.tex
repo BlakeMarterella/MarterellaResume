@@ -83,10 +83,11 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeCertification}[2]{
+% {Certification Name}{Issuing Organization}{Date}
+\newcommand{\resumeCertification}[3]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
+      {\small \textbf{#1}, {#2}} & \textit{\small #3} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -121,9 +122,9 @@
 \section{Certifications}
 \resumeSubHeadingListStart
 \resumeCertification
-  {Virginia Tech}{Blacksburg, VA}
+  {AWS Cloud Practitioner}{Amazon Web Services}{January 2022}
   \resumeCertification
-  {Virginia Tech}{Blacksburg, VA}
+  {Database Specialist, C.S.C.}{Northern Virginia Community College}{June 2021}
 \resumeSubHeadingListEnd
 
 

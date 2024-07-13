@@ -1,4 +1,4 @@
 output/*.aux
-output/*.log
+output/resume.log
 output/*.out
 output/*.synctex.gz

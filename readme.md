@@ -11,6 +11,10 @@ After 4+ years of fine-tuning and tailoring my resume in Google Docs, it was tim
 - **Customization**: Have total control over the styling and layout of your resume.
 - **Flexibility**: Easily create multiple versions of your resume for different job applications.
 
+## Getting Started
+
+Prior to this project, my LaTeX knowledge didn't extended far beyond the few research papers I had created with this technology. To give myself a starting point, I decided to use a Resume Template that I found on Overleaf, [link to orginial resume template created by Andrew C.](https://www.overleaf.com/latex/templates/andrewresumeworkshop/yrpwhsjdypmw). You can choose to modify the template using the Overleaf's online editor but I decided to export the `.tex` file and import it into my Github repository. See the section below for information on how I used VSCode with some nifty extensions to craft my ideal resume.
+
 ### Development Tools
 
 To make changes and alter my resume, I use [VSCode](https://code.visualstudio.com/) with the [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) and [Grammarly](https://github.com/znck/grammarly) extension. This extension allows me to compile my resume and preview it in realtime.
@@ -61,6 +65,29 @@ The default configuration for the LaTeX Workshop extension in VSCode is to outpu
 ```
 
 *Note:* I work on a Mac, these settings may be different on Windows or Linux machines. In the background, the LatexWorkshop extension uses `pdflatex` and other tools to compile the `.tex` file into a `.pdf` file, you can fine more information on the [pdflatex man page](https://linux.die.net/man/1/pdflatex).
+
+##  Using LaTeX Commands
+
+The template that I found already had a good foundation but it was missing a couple sections specific to my resume. I needed a way to elegantly and uniformly display my certifications on a single line with proper spacing. For that reson, I created the command called `resumeCertification` which takes in 3 parameters, the certification name, issuing organization, and date, applies some text formatting, and adjusts the spacing.
+
+```
+\newcommand{\resumeCertification}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      {\small \textbf{#1}, {#2}} & \textit{\small #3} \\
+    \end{tabular*}\vspace{-7pt}
+}
+```
+
+I can now use this command multiple times, anywhere in my `tex` file:
+
+```
+\resumeCertification {AWS Cloud Practitioner}{Amazon Web Services}{January 2022}
+```
+
+The end result looks something like this:
+
+<image>
 
 ## Future Development
 

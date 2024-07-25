@@ -2,3 +2,4 @@ output/*.aux
 output/resume.log
 output/*.out
 output/*.synctex.gz
+output

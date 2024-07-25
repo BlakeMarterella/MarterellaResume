@@ -1,5 +1,3 @@
-output/*.aux
-output/resume.log
-output/*.out
-output/*.synctex.gz
-output
+*.log
+*.out
+*.synctex.gz
